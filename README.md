@@ -31,4 +31,4 @@ This program provides a streamlined approach to migrating a database from MySQL 
 
 ##OUTPUT
 
-![Image](https://github.com/user-attachments/assets/8c8566dd-8d6c-4375-903d-2ee410341edf)
+
