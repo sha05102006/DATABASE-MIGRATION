@@ -30,4 +30,4 @@ Description:
 This program provides a streamlined approach to migrating a database from MySQL to PostgreSQL. It includes migration scripts, schema transformations, and data export/import procedures. The goal is to ensure a smooth and error-free transition while maintaining data integrity. The repository also includes documentation and best practices to help developers perform seamless migrations efficiently.
 
 ##OUTPUT
-
+![Image](https://github.com/user-attachments/assets/c45c8934-8a89-4ae3-a051-0178050b5aa8)
