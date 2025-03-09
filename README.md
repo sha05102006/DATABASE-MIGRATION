@@ -25,32 +25,9 @@ Ensure you have the following installed on your system:
 - [MySQL](https://dev.mysql.com/downloads/)
 - [PostgreSQL](https://www.postgresql.org/download/)
 
-## Step 1: Export Data from MySQL
-First, create a dump of your MySQL database.
-```bash
-mysqldump -u root -p --compatible=postgresql --no-create-info mydb > data.sql
-```
-This command exports only the data, without table structures.
 
-## Step 2: Export Schema from MySQL
-```bash
-mysqldump -u root -p --no-data mydb > schema.sql
-```
-Modify `schema.sql` to replace MySQL-specific syntax:
-- `AUTO_INCREMENT` → `SERIAL`
-- `ENGINE=InnoDB` → Remove
+Description:
+This program provides a streamlined approach to migrating a database from MySQL to PostgreSQL. It includes migration scripts, schema transformations, and data export/import procedures. The goal is to ensure a smooth and error-free transition while maintaining data integrity. The repository also includes documentation and best practices to help developers perform seamless migrations efficiently.
 
-## Step 3: Create Tables in PostgreSQL
-After modifications, import the schema into PostgreSQL:
-```bash
-psql -U postgres -d mydb -f schema.sql
-```
+##OUTPUT
 
-## Step 4: Import Data into PostgreSQL
-```bash
-psql -U postgres -d mydb -f data.sql
-```
-Verify the migration:
-```sql
-SELECT COUNT(*) FROM mytable;
-```
